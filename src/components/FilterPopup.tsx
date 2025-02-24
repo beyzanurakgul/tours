@@ -144,7 +144,7 @@ const FilterPopup: React.FC<{ closePopup: () => void }> = ({ closePopup }) => {
 
       {/* 🔹 Filtreleri Uygula Butonu */}
       <Button className="mb-4 mt-2 w-full" onClick={handleApplyFilters}>
-        Filtreleri Uygula
+        Filtrele
       </Button>
     </Modal>
   );
