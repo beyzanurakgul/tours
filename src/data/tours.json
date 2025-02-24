@@ -6,6 +6,8 @@
     "price": 100,
     "imageUrl": "https://cdn.pixabay.com/photo/2022/05/23/20/33/hot-air-balloon-7217174_1280.jpg",
     "category": "Tours",
+    "rating": 4.3,
+    "reviews": 20,
     "description": "Gökyüzünde balon keyfi, muhteşem Kapadokya manzaraları eşliğinde...",
     "filters": {
       "location": "Kapadokya",
