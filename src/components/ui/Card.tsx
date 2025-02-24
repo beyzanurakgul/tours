@@ -46,6 +46,11 @@ const Card: React.FC<CardProps> = ({
         <div className="flex items-center text-yellow-500 text-sm mb-2">
           ★ 4.3 (20)
         </div>
+         <div className="absolute bottom-0 left-0 mb-2 ml-2">
+        <div calssName="text-orange-700 border border-b-2 w-12">
+          Detaylar
+        </div>
+       </div>
       </div>
     </div>
   );
