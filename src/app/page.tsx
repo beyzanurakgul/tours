@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useFilterStore } from '../store/useFilterStore';
 import { Card } from '../components/ui';
 import toursData from '../data/tours.json';
@@ -14,14 +14,13 @@ export default function HomePage() {
     selectedStringFilters,
     priceRange,
     durationRange,
-    searchQuery
+    searchQuery,
+    selectedTourId,
+    setSelectedTourId
   } = useFilterStore();
 
-  const [selectedTourId, setSelectedTourId] = useState<number | null>(null);
-
-  // Uygulama açıldığında sahte veri store’a yüklensin
   useEffect(() => {
-    setTours(toursData as any);
+    setTours(toursData);
   }, [setTours]);
 
   // **Filtrelenmiş sonuçları hesapla**
@@ -30,29 +29,20 @@ export default function HomePage() {
     if (tour.price < priceRange.min || tour.price > priceRange.max) return false;
     const duration = tour.filters.duration ?? 0;
     if (duration < durationRange.min || duration > durationRange.max) return false;
-    for (let filt of selectedStringFilters) {
-      if (filt === 'ticket') {
-        if (!tour.filters.ticket) return false;
-      } else {
-        if (!tour.filters.tags || !tour.filters.tags.includes(filt)) return false;
-      }
+    for (const filt of selectedStringFilters) {
+      if (!tour.filters.tags || !tour.filters.tags.includes(filt)) return false;
     }
     if (searchQuery) {
       const lowerQuery = searchQuery.toLowerCase();
-      const combinedText = `${tour.title} ${tour.subtitle} ${tour.description ?? ''} ${(tour.filters.location || '')}`
+      const combinedText = `${tour.title} ${tour.subtitle} ${tour.description ?? ''} ${tour.filters.location ?? ''}`
         .toLowerCase();
       if (!combinedText.includes(lowerQuery)) return false;
     }
     return true;
   });
 
-  // Seçili ürünü bul
-  const selectedTour = filteredTours.find((t) => t.id === selectedTourId);
-
   return (
     <div className="max-w-6xl mx-auto px-6 py-8">
-      
-      {/* Başlık Bilgisi */}
       <div className="text-center">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
           {selectedCategory ? `${selectedCategory} Listesi` : 'Tüm Ürünler'}
@@ -62,16 +52,17 @@ export default function HomePage() {
         </p>
       </div>
 
-      {/* Ürün Kartları */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
         {filteredTours.length > 0 ? (
           filteredTours.map((tour) => (
             <Card
               key={tour.id}
+              id={tour.id}
               title={tour.title}
               subtitle={tour.subtitle}
-              price={`${tour.price} USD`}
+              price={tour.price}
               imageUrl={tour.imageUrl}
+              category={tour.category}
               onClick={() => setSelectedTourId(tour.id)}
             />
           ))
@@ -85,16 +76,7 @@ export default function HomePage() {
         )}
       </div>
 
-      {/* Detay Modalı */}
-      {selectedTour && (
-        <DetailModal
-          isOpen={true}
-          onClose={() => setSelectedTourId(null)}
-          title={selectedTour.title}
-          description={selectedTour.description}
-          imageUrl={selectedTour.imageUrl}
-        />
-      )}
+      {selectedTourId && <DetailModal />}
     </div>
   );
 }

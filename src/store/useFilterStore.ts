@@ -5,13 +5,16 @@ import { create } from 'zustand';
 export interface Tour {
   id: number;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   price: number;
   imageUrl: string;
   category: string;
   description?: string;
   filters: {
-    [key: string]: any;
+    location?: string;
+    duration?: number;
+    ticket?: boolean;
+    tags?: string[];
   };
 }
 
@@ -22,22 +25,15 @@ interface RangeValue {
 
 interface FilterState {
   tours: Tour[];
-
-  // Seçili Ana Kategori
+  selectedTourId: number | null;
   selectedCategory: string | null;
-
-  // String / Etiket filtreleri (örn. 'manzara', 'macera', 'airport' vs.)
   selectedStringFilters: string[];
-
-  // Fiyat ve Süre Aralığı
   priceRange: RangeValue;
   durationRange: RangeValue;
-
-  // Arama çubuğu
   searchQuery: string;
 
-  // Metotlar
   setTours: (tours: Tour[]) => void;
+  setSelectedTourId: (id: number | null) => void;
   setCategory: (category: string | null) => void;
   addStringFilter: (filter: string) => void;
   removeStringFilter: (filter: string) => void;
@@ -50,6 +46,7 @@ interface FilterState {
 
 export const useFilterStore = create<FilterState>((set) => ({
   tours: [],
+  selectedTourId: null,
   selectedCategory: null,
   selectedStringFilters: [],
   priceRange: { min: 0, max: 999999 },
@@ -57,40 +54,26 @@ export const useFilterStore = create<FilterState>((set) => ({
   searchQuery: '',
 
   setTours: (tours) => set({ tours }),
-
-  setCategory: (category) =>
-    set({
-      selectedCategory: category,
-      selectedStringFilters: [],
-      priceRange: { min: 0, max: 999999 },
-      durationRange: { min: 0, max: 999999 },
-      searchQuery: ''
-    }),
-
+  setSelectedTourId: (id) => set({ selectedTourId: id }),
+  setCategory: (category) => set({ selectedCategory: category, selectedStringFilters: [] }),
   addStringFilter: (filter) =>
     set((state) => ({
-      selectedStringFilters: [...state.selectedStringFilters, filter]
+      selectedStringFilters: [...state.selectedStringFilters, filter],
     })),
-
   removeStringFilter: (filter) =>
     set((state) => ({
-      selectedStringFilters: state.selectedStringFilters.filter((f) => f !== filter)
+      selectedStringFilters: state.selectedStringFilters.filter((f) => f !== filter),
     })),
-
   clearStringFilters: () => set({ selectedStringFilters: [] }),
-
   setPriceRange: (range) => set({ priceRange: range }),
-
   setDurationRange: (range) => set({ durationRange: range }),
-
   setSearchQuery: (query) => set({ searchQuery: query }),
-
   clearAllFilters: () =>
     set({
       selectedCategory: null,
       selectedStringFilters: [],
       priceRange: { min: 0, max: 999999 },
       durationRange: { min: 0, max: 999999 },
-      searchQuery: ''
-    })
+      searchQuery: '',
+    }),
 }));
