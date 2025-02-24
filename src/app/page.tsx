@@ -50,7 +50,7 @@ export default function HomePage() {
   const selectedTour = filteredTours.find((t) => t.id === selectedTourId);
 
   return (
-    <div className="max-w-8xl mx-auto px-6 py-8">
+    <div className="max-w-7xl mx-auto px-6 py-8">
       {/* Başlık Bilgisi */}
       <div className="text-center">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
