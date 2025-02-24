@@ -51,7 +51,7 @@ const FilterPopup: React.FC<{ closePopup: () => void }> = ({ closePopup }) => {
   };
 
   return (
-    <Modal isOpen={true} onClose={closePopup} widthClass="w-10/12 h-6/6 sm:w-1/2 md:w-1/3">
+    <Modal isOpen={true} onClose={closePopup} widthClass="w-10/12 h-6/6 sm:w-3/6 md:w-3/6">
       <h2 className="text-xl text-orange-600 font-bold mb-4">Kategoriler</h2>
 
       {/* 🔹 Kategori Seçimi */}
@@ -85,7 +85,7 @@ const FilterPopup: React.FC<{ closePopup: () => void }> = ({ closePopup }) => {
                 />
               </label>
               <label className="flex flex-col">
-                <span className="text-gray-600 text-sm mb-1">Max</span>
+                <span className="text-orange-600 text-sm mb-1">Max</span>
                 <input
                   type="number"
                   value={priceRange.max}
@@ -101,7 +101,7 @@ const FilterPopup: React.FC<{ closePopup: () => void }> = ({ closePopup }) => {
             <h3 className="text-lg text-orange-600 font-semibold mb-2">Süre Aralığı (dakika)</h3>
             <div className="grid grid-cols-2 gap-4">
               <label className="flex flex-col">
-                <span className="text-gray-600 text-sm mb-1">Min</span>
+                <span className="text-orange-600 text-sm mb-1">Min</span>
                 <input
                   type="number"
                   value={durationRange.min}
@@ -111,7 +111,7 @@ const FilterPopup: React.FC<{ closePopup: () => void }> = ({ closePopup }) => {
                 />
               </label>
               <label className="flex flex-col">
-                <span className="text-gray-600 text-sm mb-1">Max</span>
+                <span className="text-orange-600 text-sm mb-1">Max</span>
                 <input
                   type="number"
                   value={durationRange.max}
