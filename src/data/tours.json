@@ -1,0 +1,237 @@
+[
+  {
+    "id": 1,
+    "title": "Kapadokya Balon Turu",
+    "subtitle": "Kapadokya, Türkiye",
+    "price": 100,
+    "imageUrl": "https://cdn.pixabay.com/photo/2022/05/23/20/33/hot-air-balloon-7217174_1280.jpg",
+    "category": "Tours",
+    "description": "Gökyüzünde balon keyfi, muhteşem Kapadokya manzaraları eşliğinde...",
+    "filters": {
+      "location": "Kapadokya",
+      "duration": 60,
+      "ticket": true,
+      "tags": ["manzara", "macera"]
+    }
+  },
+  {
+    "id": 2,
+    "title": "İstanbul Boğaz Turu",
+    "subtitle": "İstanbul, Türkiye",
+    "price": 50,
+    "imageUrl": "https://cdn.pixabay.com/photo/2021/11/30/14/19/mosque-6835457_1280.jpg",
+    "category": "Tours",
+    "description": "İstanbul Boğazı'nın eşsiz güzelliği, akşamüstü veya gündüz turları...",
+    "filters": {
+      "location": "İstanbul",
+      "duration": 120,
+      "ticket": true,
+      "tags": ["manzara", "tekne"]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Pamukkale Doğa Gezisi",
+    "subtitle": "Denizli, Türkiye",
+    "price": 70,
+    "imageUrl": "https://cdn.pixabay.com/photo/2023/01/20/19/08/pamukkale-7732424_1280.jpg",
+    "category": "Tours",
+    "description": "Bembeyaz travertenleri keşfedin, doğal sıcak suların keyfini çıkarın...",
+    "filters": {
+      "location": "Pamukkale",
+      "duration": 240,
+      "ticket": false,
+      "tags": ["doğa", "yürüyüş"]
+    }
+  },
+  {
+    "id": 4,
+    "title": "Fethiye Yelkenli Kiralama",
+    "subtitle": "Muğla, Türkiye",
+    "price": 120,
+    "imageUrl": "https://www.hesaplitatilci.com/uploads/0000/1/2023/12/03/fethiye-12-adalar-tekne-turu.jpg",
+    "category": "Rent",
+    "description": "Eşsiz koyları keşfetmek için yelkenli veya tekne kiralama seçeneği...",
+    "filters": {
+      "vehicleType": "Yelkenli",
+      "duration": 180,
+      "tags": ["mavi tur", "özel"]
+    }
+  },
+  {
+    "id": 5,
+    "title": "VIP Transfer - Havalimanı",
+    "subtitle": "Antalya, Türkiye",
+    "price": 40,
+    "imageUrl": "https://www.konyaturizm.com.tr/images/services/havaalani-vip-transferi.jpg",
+    "category": "Transfer",
+    "description": "Havalimanından otele veya şehir merkezine konforlu VIP transfer...",
+    "filters": {
+      "airport": true,
+      "duration": 45,
+      "tags": ["vip", "özel"]
+    }
+  },
+  {
+    "id": 6,
+    "title": "Çanakkale Feribot Bileti",
+    "subtitle": "Çanakkale, Türkiye",
+    "price": 15,
+    "imageUrl": "https://cdnuploads.aa.com.tr/uploads/Contents/2015/02/09/thumbs_b_c_cd0a5040972c4c8d8894b5912bde4fe2.jpg",
+    "category": "Tickets",
+    "description": "Gelibolu-Çanakkale arasında feribot bileti, hızlı ve güvenli geçiş...",
+    "filters": {
+      "eventType": "Feribot",
+      "duration": 30,
+      "tags": ["ulaşım", "deniz"]
+    }
+  },
+  {
+    "id": 7,
+    "title": "Konser Bileti - Açıkhava",
+    "subtitle": "İzmir, Türkiye",
+    "price": 90,
+    "imageUrl": "https://www.sixt.com.tr/storage/cache/2506fe1c517f578d11fbfd7285a99682c7d01f4c.webp",
+    "category": "Tickets",
+    "description": "Açıkhava sahnesinde favori sanatçınızı dinleme fırsatı, sınırlı sayıda bilet...",
+    "filters": {
+      "eventType": "Konser",
+      "duration": 180,
+      "tags": ["müzik", "eğlence"]
+    }
+  },
+  {
+    "id": 8,
+    "title": "Antalya Yamaç Paraşütü",
+    "subtitle": "Antalya, Türkiye",
+    "price": 110,
+    "imageUrl": "https://www.touralanya.com/TurResimleri/010444paraglidingfromantalya.jpeg",
+    "category": "Tours",
+    "description": "Denize nazır uçuş deneyimi, profesyonel eğitmen eşliğinde heyecan...",
+    "filters": {
+      "location": "Antalya",
+      "duration": 30,
+      "ticket": false,
+      "tags": ["macera", "yükseklik"]
+    }
+  }, 
+  {
+        "id": 9,
+        "title": "Konya Mevlana Turu",
+        "subtitle": "Konya, Türkiye",
+        "price": 60,
+        "imageUrl": "https://cdn.pixabay.com/photo/2012/11/06/23/47/mosque-64805_1280.jpg",
+        "category": "Tours",
+        "description": "Mevlana Türbesi ve tarihi Konya kültürünü keşfedin...",
+        "filters": {
+            "location": "Konya",
+            "duration": 120,
+            "ticket": true,
+            "tags": ["tarih", "kültür"]
+        }
+    },
+    {
+    "id": 10,
+    "title": "Antalya Jeep Safari",
+    "subtitle": "Antalya, Türkiye",
+    "price": 95,
+    "imageUrl": "https://www.excursionmarmaris.com/wp-content/uploads/2021/05/jee-2-1.jpg",
+    "category": "Tours",
+    "description": "Antalya'nın muhteşem doğasında adrenalin dolu bir safari turu...",
+    "filters": {
+      "location": "Antalya",
+      "duration": 180,
+      "ticket": true,
+      "tags": ["macera", "doğa"]
+    }
+  },
+  {
+    "id": 11,
+    "title": "Kapadokya ATV Safari",
+    "subtitle": "Kapadokya, Türkiye",
+    "price": 75,
+    "imageUrl": "https://kapadokyadaturlar.com/wp-content/uploads/2018/03/kapadokya-atv-turu-1280x720.jpg",
+    "category": "Tours",
+    "description": "Kapadokya'nın büyüleyici manzaraları eşliğinde ATV safari deneyimi...",
+    "filters": {
+      "location": "Kapadokya",
+      "duration": 120,
+      "ticket": false,
+      "tags": ["macera", "doğa"]
+    }
+  },
+  {
+    "id": 12,
+    "title": "Bodrum Yelkenli Kiralama",
+    "subtitle": "Bodrum, Türkiye",
+    "price": 150,
+    "imageUrl": "https://cdn-images.viravira.co/prod-images.viravira.co/uploads/boats/20742/0aba56d9-9b18-46a4-92e1-d901aebf3077.jpg?w=840&h=612",
+    "category": "Rent",
+    "description": "Bodrum'un berrak sularında yelkenliyle özgürce seyahat edin...",
+    "filters": {
+      "vehicleType": "Yelkenli",
+      "duration": 240,
+      "tags": ["lüks", "özel"]
+    }
+  },
+  {
+    "id": 13,
+    "title": "Mardin Kültür Turu",
+    "subtitle": "Mardin, Türkiye",
+    "price": 65,
+    "imageUrl": "https://www.mardinturlari.com/wp-content/uploads/2018/04/mardinleri-768x426.jpg",
+    "category": "Tours",
+    "description": "Tarihi taş konakları ve mistik havasıyla Mardin'i keşfedin...",
+    "filters": {
+      "location": "Mardin",
+      "duration": 120,
+      "ticket": true,
+      "tags": ["tarih", "kültür"]
+    }
+  },
+  {
+    "id": 14,
+    "title": "Şanlıurfa Balıklıgöl Turu",
+    "subtitle": "Şanlıurfa, Türkiye",
+    "price": 55,
+    "imageUrl": "https://cdn.pixabay.com/photo/2017/09/27/20/55/sanliurfa-2793423_1280.jpg",
+    "category": "Tours",
+    "description": "Peygamberler şehri Şanlıurfa'nın tarihi ve kültürel mirasını keşfedin...",
+    "filters": {
+      "location": "Şanlıurfa",
+      "duration": 90,
+      "ticket": true,
+      "tags": ["doğa", "tarih"]
+    }
+  },
+  {
+    "id": 15,
+    "title": "İzmir Alaçatı Turu",
+    "subtitle": "İzmir, Türkiye",
+    "price": 70,
+    "imageUrl": "https://image.cnnturk.com/i/cnnturk/75/1200x675/60bf0243d265a226442ca6cd.jpg",
+    "category": "Tours",
+    "description": "Ege'nin incisi Alaçatı sokaklarını keşfedin, deniz havasını soluyun...",
+    "filters": {
+      "location": "İzmir",
+      "duration": 150,
+      "ticket": true,
+      "tags": ["kültür", "deniz"]
+    }
+  },
+  {
+    "id": 16,
+    "title": "Saklıkent Kanyonu Turu",
+    "subtitle": "Fethiye, Türkiye",
+    "price": 65,
+    "imageUrl": "https://boattripturkey.com/wp-content/uploads/2021/01/Saklikent-kanyonu-hakkinda-bilgi.jpg",
+    "category": "Tours",
+    "description": "Doğanın içinde yürüyüş yaparak Saklıkent'in serin sularına dalın...",
+    "filters": {
+      "location": "Fethiye",
+      "duration": 180,
+      "ticket": true,
+      "tags": ["doğa", "macera"]
+    }
+  }
+]
