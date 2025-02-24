@@ -31,7 +31,7 @@ const Modal: React.FC<ModalProps> = ({
   return (
     <div
       onClick={handleOverlayClick}
-      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end items-start"
+      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center"
     >
       <div
         className={clsx(
