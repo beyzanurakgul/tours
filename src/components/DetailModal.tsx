@@ -40,9 +40,7 @@ const DetailModal: React.FC<DetailModalProps> = ({
           {description ?? 'Detay bilgisi bulunmamaktadır.'}
         </p>
       </div>
-      <Button onClick={onClose} className="w-full">
-        Kapat
-      </Button>
+
     </Modal>
   );
 };
