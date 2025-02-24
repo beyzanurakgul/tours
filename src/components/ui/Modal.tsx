@@ -15,7 +15,7 @@ const Modal: React.FC<ModalProps> = ({
   children,
   isOpen,
   onClose,
-  widthClass = 'w-4/6 sm:w-2/3 md:w-1/3'
+  widthClass = 'w-3/4 sm:w-1/2 md:w-1/3'
 }) => {
   const handleOverlayClick = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
