@@ -8,8 +8,6 @@ export interface CardProps {
   subtitle?: string;
   price?: string;
   imageUrl: string;
-  rating: string;
-  reviews: string;
   onClick?: () => void;
 }
 
@@ -17,8 +15,6 @@ const Card: React.FC<CardProps> = ({
   title,
   subtitle,
   price,
-  rating,
-  reviews,
   imageUrl,
   onClick
 }) => {
@@ -47,9 +43,6 @@ const Card: React.FC<CardProps> = ({
         <h3 className="text-lg font-bold text-gray-900 mb-1">{title}</h3>
         {subtitle && <p className="text-gray-600 text-sm mb-2">{subtitle}</p>}
         {price && <p className="text-primary-600 font-semibold text-lg">{price}</p>}
-         <div className="flex items-center text-yellow-500 text-sm mb-2">
-          ★ {rating} ({reviews})
-        </div>
       </div>
     </div>
   );
