@@ -3,6 +3,7 @@
 import React from 'react';
 import { useFilterStore } from '../store/useFilterStore';
 
+// 🚀 Örnek Ürün Listesi
 const PRODUCTS = [
   { id: 1, category: 'Tours', name: 'Şehir Turu', filters: ['Fiyat', 'Lokasyon'] },
   { id: 2, category: 'Tickets', name: 'Konser Bileti', filters: ['Fiyat'] },
@@ -10,11 +11,13 @@ const PRODUCTS = [
 ];
 
 const ProductList: React.FC = () => {
+  // 🚀 Zustand Store'dan filtreleme verilerini çek
   const { selectedCategory, selectedFilters } = useFilterStore();
 
+  // 🚀 Seçili filtrelere uygun ürünleri filtrele
   const filteredProducts = PRODUCTS.filter(
     (product) =>
-      product.category === selectedCategory &&
+      (!selectedCategory || product.category === selectedCategory) &&
       selectedFilters.every((filter) => product.filters.includes(filter))
   );
 
@@ -23,7 +26,7 @@ const ProductList: React.FC = () => {
       <h2 className="text-2xl font-bold mb-4">Ürünler</h2>
       {filteredProducts.length > 0 ? (
         filteredProducts.map((product) => (
-          <div key={product.id} className="p-4 border rounded mb-2">
+          <div key={product.id} className="p-4 border rounded mb-2 shadow-md bg-white">
             {product.name}
           </div>
         ))
