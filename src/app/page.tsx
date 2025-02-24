@@ -70,6 +70,8 @@ export default function HomePage() {
               title={tour.title}
               subtitle={tour.subtitle}
               price={`${tour.price} USD`}
+              rating={tour.rating}
+              reviews={tour.reviews}
               imageUrl={tour.imageUrl}
               onClick={() => setSelectedTourId(tour.id)}
             />
