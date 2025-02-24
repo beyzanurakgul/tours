@@ -40,7 +40,6 @@ const DetailModal: React.FC<DetailModalProps> = ({
           {description ?? 'Detay bilgisi bulunmamaktadır.'}
         </p>
       </div>
-
     </Modal>
   );
 };
