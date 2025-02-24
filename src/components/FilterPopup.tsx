@@ -51,7 +51,7 @@ const FilterPopup: React.FC<{ closePopup: () => void }> = ({ closePopup }) => {
   };
 
   return (
-    <Modal isOpen={true} onClose={closePopup} widthClass="w-10/12 h-6/6 sm:w-3/6 md:w-3/6">
+    <Modal isOpen={true} onClose={closePopup} widthClass="w-10/12 h-5/6 sm:w-3/6 md:w-3/6">
       <h2 className="text-xl text-orange-600 font-bold mb-4">Kategoriler</h2>
 
       {/* 🔹 Kategori Seçimi */}
