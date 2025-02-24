@@ -36,7 +36,7 @@ const Modal: React.FC<ModalProps> = ({
       <div
         className={clsx(
           widthClass,
-          'bg-white h-full p-6 overflow-y-auto relative rounded-l-lg shadow-lg transform transition-all duration-300 ease-in-out',
+          'bg-white h-4/6 p-6 overflow-y-auto relative rounded-l-lg shadow-lg transform transition-all duration-300 ease-in-out',
           isOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
